@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="sumtwonos"/>
+        <attribute name="authors" value="Victo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-15 12:24:53 a. m."/>
+        <attribute name="created" value="VmljdG87VklQRUJJUkRPLU87MjAyNS0wMi0xMzsxMjowNzoxNSBhLiBtLjsyNzY1"/>
+        <attribute name="edited" value="VmljdG87VklQRUJJUkRPLU87MjAyNS0wMi0xNTsxMjoyNDo1MyBhLiBtLjsxOzI4NzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="primersumando" type="Integer" array="False" size=""/>
+            <declare name="segundosumando" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingrese el primer sumando: &quot;" newline="False"/>
+            <input variable="primersumando"/>
+            <output expression="&quot;Ingrese el segundo sumando: &quot;" newline="False"/>
+            <input variable="segundosumando"/>
+            <output expression="&quot;El resultado de la suma de &quot; &amp; primersumando &amp; &quot; + &quot; &amp; segundosumando &amp; &quot; es: &quot; &amp; (primersumando + segundosumando)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
