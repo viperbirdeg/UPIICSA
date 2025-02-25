@@ -4,16 +4,16 @@
         <attribute name="name" value="sumtwonos"/>
         <attribute name="authors" value="Victo"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-02-15 12:24:53 a. m."/>
+        <attribute name="saved" value="2025-02-15 09:59:52 p. m."/>
         <attribute name="created" value="VmljdG87VklQRUJJUkRPLU87MjAyNS0wMi0xMzsxMjowNzoxNSBhLiBtLjsyNzY1"/>
-        <attribute name="edited" value="VmljdG87VklQRUJJUkRPLU87MjAyNS0wMi0xNTsxMjoyNDo1MyBhLiBtLjsxOzI4NzY="/>
+        <attribute name="edited" value="VmljdG87VklQRUJJUkRPLU87MjAyNS0wMi0xNTswOTo1OTo1MiBwLiBtLjsyOzI5MDU="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <declare name="primersumando" type="Integer" array="False" size=""/>
             <declare name="segundosumando" type="Integer" array="False" size=""/>
-            <output expression="&quot;Ingrese el primer sumando: &quot;" newline="False"/>
+            <output expression="&quot;[ES]Ingrese el primer sumando: &quot; &amp; ToChar(13) &amp; ToChar(10) &amp; &quot;[EN] Enter first adding: &quot;" newline="False"/>
             <input variable="primersumando"/>
             <output expression="&quot;Ingrese el segundo sumando: &quot;" newline="False"/>
             <input variable="segundosumando"/>

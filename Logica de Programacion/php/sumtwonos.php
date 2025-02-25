@@ -1,6 +1,11 @@
 <?php
-$num1 = 1;
-$num2 = 2;
-$cosa = "num1";
-echo $$cosa;
+
+function input(){
+	return fgets(STDIN);
+}
+echo "Inserta el primer sumando: \n";
+$num1 = input();
+echo "Inserte el segundo sumando: \n";
+$num2 = input();
+echo ("El resultado de la suma de $num1" . " + $num2 es: " . ($num1 + $num2) );
 ?>
