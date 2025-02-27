@@ -39,6 +39,6 @@
       $test = true;
     }
   }while($test);  
-  //Acabar, no se que paso, pero salio
+  //Acabar, no se que paso, pero salioF
   echo(">>RESULTADO: $result <<");
 ?>
