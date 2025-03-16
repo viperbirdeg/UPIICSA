@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="sumfiftynumbers"/>
+        <attribute name="authors" value="Victo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-28 11:47:58 p. m."/>
+        <attribute name="created" value="VmljdG87VklQRUJJUkRPLU87MjAyNS0wMi0yODsxMDo0MDozOSBhLiBtLjsyNzcy"/>
+        <attribute name="edited" value="VmljdG87VklQRUJJUkRPLU87MjAyNS0wMi0yODsxMTo0Nzo1OCBwLiBtLjsyOzI5MDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cadena1, cadena2" type="String" array="False" size=""/>
+            <assign variable="cadena1" expression="&quot;0123&quot;"/>
+            <assign variable="cadena2" expression="&quot;123&quot;"/>
+            <declare name="auxiliar" type="String" array="True" size="2"/>
+            <assign variable="auxiliar" expression="fillstring(cadena1,cadena2)"/>
+            <output expression="auxiliar[0] &amp; &quot; &quot; &amp; auxiliar[1]" newline="True"/>
+        </body>
+    </function>
+    <function name="fillstring" type="String" variable="result">
+        <parameters>
+            <parameter name="firststring" type="String" array="False"/>
+            <parameter name="secondstring" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="String" array="False" size=""/>
+            <declare name="difference" type="Integer" array="False" size=""/>
+            <assign variable="difference" expression="Len(firststring) - Len(secondstring)"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="abs(difference)" end="0" direction="dec" step="1">
+                <if expression="difference &gt;= 0">
+                    <then>
+                        <assign variable="secondstring" expression="&quot;0&quot; &amp; secondstring"/>
+                    </then>
+                    <else>
+                        <assign variable="firststring" expression="&quot;0&quot; &amp; firststring"/>
+                    </else>
+                </if>
+            </for>
+            <assign variable="result[0]" expression="firststring"/>
+            <assign variable="result[1]" expression="secondstring"/>
+        </body>
+    </function>
+    <function name="sum" type="String" variable="resultstring">
+        <parameters>
+            <parameter name="firststring" type="String" array="False"/>
+            <parameter name="secondstring" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="resultstring" type="String" array="False" size=""/>
+            <declare name="auxiliar" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="Len(firststring) - 1" end="0" direction="dec" step="1">
+                <declare name="index" type="Integer" array="False" size=""/>
+                <assign variable="index" expression="ToInteger(firststring[i]) + ToInteger(secondstring[i]) + auxiliar"/>
+                <assign variable="resultstring" expression="index%10 &amp; resultstring"/>
+                <assign variable="auxiliar" expression="Int(index/10)"/>
+            </for>
+            <if expression="auxiliar != 0">
+                <then>
+                    <assign variable="resultstring" expression="auxiliar &amp; resultstring"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+    <function name="validar" type="Boolean" variable="result">
+        <parameters>
+            <parameter name="cadena" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Boolean" array="False" size=""/>
+            <assign variable="result" expression="TRUE"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="Len(cadena) - 1" end="0" direction="dec" step="1">
+                <if expression="ToCode(cadena[i]) &lt; 48 || ToCode(cadena[i]) &gt; 57">
+                    <then>
+                        <assign variable="result" expression="FALSE"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
